@@ -1,0 +1,873 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:600,700%7CRoboto:400,500,500i");
+
+//our button yellow
+// #af8f4d;
+// #ad4cce; navbar color
+//twilight: #565697 match card background
+// -dark-violet: #252146;
+// --grayly-blue: #565895;
+// --marine: #211d41;
+// --haiti: #161236;
+// --martinique: #2e2a4f;
+// --kinky-shark: #392b68;
+// --satiric-shark: #312955;
+// --arid-shark: #3b2d6a;
+// --tired-licorice: #2c274f;
+// --restrictive-jet: #1d1546;
+// --actual-jet: #151136;
+
+//button Hover Colors:
+// background-color: #565895;
+// color: #af8f4d;
+// text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+// border-color: #f5d075;
+
+// yellows
+// --dark-gold: #bd9e59;
+//     --yellow: #ffc306;
+//     --light-yellow: #f5d075;
+
+// --dark-blue-grey: #1a133d;
+
+//highlight colours
+// --blue: #38c6f4;
+//     --bluey-grey: #8890b5;
+//     --white: #ffffff;
+//     --success: #00b972;
+//     --greeny: #4cb748;
+//     --greeny-blue: #3cbdc2;
+//     --gold: #bd9e59;
+//     --tier-platinum: #2a947b;
+//     --strong-cyan: #18bd9b;
+//     --tier-gold: #f9b439;
+//     --pink: #c848c3;
+//     --darkish-pink: #e54787;
+//     --red: #ff2576;
+
+@font-face {
+  font-family: 'Friz-Quadrata';
+  src: url("../fonts/Friz\ Quadrata\ Std\ Medium.otf") format("opentype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+#root {
+  line-height: 24px;
+  font-size: 14px;
+  font-family: "Friz-Quadrata", "Roboto", sans-serif;
+  font-weight: 500;
+  color: white; 
+  background-color: #1a133d;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HOME PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.bg {
+  top:0;
+  background-size: cover;
+  height: 96vh;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background: center;
+  display: flex;
+  flex-direction: column;
+}
+
+// @media screen and (max-width: 1024px) { /* Specific to this particular image */
+//   .bg {
+//     left: 50%;
+//     margin-left: -512px;   /* 50% */
+//   }
+// }
+
+#homeTitles{
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+
+.homeTitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-shadow: black 2px 2px;
+  font-size: 64px;
+}
+
+.homeFlavour {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  text-shadow: black 1.5px 1.5px;
+}
+
+#homeSection{
+  display: flex;
+  justify-content: center;
+}
+
+.topGames{
+  display: flex;
+  flex-direction: row;
+}
+
+.homeImages {
+  display: flex;
+  flex-grow: 1;
+  height: 150px;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: skewX(12deg);
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    opacity: 0.3;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+.homeImages:hover {
+  transform: scale(1.5);
+  transform: skewX(12deg);
+  opacity: 1.0;
+  transition: opacity .55s ease-in-out;
+  -moz-transition: opacity .55s ease-in-out;
+  -webkit-transition: opacity .55s ease-in-out;
+}
+
+// ~~~~~~~~~~~~ MATCH CARD AND MATCHES PAGE ~~~~~~~~~~~~~
+
+// ~~~~~~~ Match Cards
+.cardWrapper{
+  width: 190px;
+  height: 190px;
+  margin: 10px;
+  border: 1px solid white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 3px;
+  background-color: #392b68;
+  transition: transform 0.2s ease;
+}
+
+.cardWrapper:hover {
+  transform: scale(1.1);
+  color: #f5d075;
+  border-color: #fc7c00;
+}
+
+#cardLink{
+  color: inherit;
+  text-decoration: none;
+}
+
+#cardTitle{
+  white-space: nowrap;
+  text-align: center;
+  width: 95%;
+}
+
+.thumbnail {
+  width: 100%;
+  border: 2.5px solid #af8f4d;
+  border-radius: 2px;
+}
+
+.matchCardData{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+  margin-bottom: 0;
+  align-items: center;
+}
+
+#cardRating{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 33%;
+}
+
+#cardViews{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 28%;
+}
+
+#cardViewsNumber{
+  width: 40%;
+}
+
+
+#cardEye{
+  color: #af8f4d;
+  width: 60%;
+}
+
+//~~~~~~ Matches
+
+.matchesWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 86vh;
+}
+
+#aboveMatchesGrid{
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #392b68;
+  text-align: center;
+  min-width: 300px;
+}
+
+#matchTitle{
+  font-size: 40px;
+}
+
+#matchFlavour{
+  font-size: 18px;
+}
+
+#filtersDiv{
+  display: flex;
+  justify-content: space-between;
+}
+
+#filtersDiv input{
+  display: flex;
+  text-align: center;
+  width: 60%;
+}
+
+#filtersDiv select{
+  display: flex;
+  text-align: center;
+  width: 20%;
+}
+
+.matchesGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1050px;
+  min-width: 420px;
+}
+
+
+// ~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~~
+
+#footWrap{
+  border-top: 1px solid white;
+  margin-top: 0;
+  height: 50px;
+}
+#footer{
+  color: rgba(120, 120, 120, 0.81);
+  font-size: 14px;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftText{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.ourLinks{
+  margin-left: 5px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ourLinks:hover{
+  color: white;
+}
+
+#footerUl1, #footerUl2{
+  display: flex;
+}
+
+.hoverList:hover{
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+}
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MATCH PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#matchPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+}
+
+#playerWrapper{
+  margin-top: 80px;
+  border: 1px solid white;
+  border-radius: 3px;
+  background-color: #392b68;
+  max-width: 600px;
+  min-width: 420px;
+}
+
+#matchEye{
+  color: #af8f4d;
+}
+
+#matchTitle{
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: center;
+  width: 95%;
+}
+
+#matchData{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 0;
+  align-items: center;
+}
+
+#matchdataLeft{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 16%;
+}
+
+#matchdataRight{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 16%;
+}
+
+// ~~~~~~~ IFRAME
+
+iframe{
+  width: 560px; 
+  height: 315px;
+}
+
+#iframeO{
+  border: 2.5px solid #af8f4d;
+  border-radius: 3px;
+}
+
+// ~~~~~~ COMMENTS
+
+.commentBox{
+  button{ 
+  background-color: #af8f4d;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000000;
+  }
+}
+.commentsBox{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: 1px solid white;
+  border-radius: 3px;
+  background-color: #392b68;
+  max-width: 600px;
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#commentsTitle{
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+
+.commentsBox form{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.commentsBox form textarea{
+  width: 90%;
+  margin: 3px;
+  text-align: center;
+  vertical-align: middle;
+  height: 120px;
+}
+
+#commentSubmit {
+  width: 90%;
+  background-color: #af8f4d;
+  padding: 5px 5px 20px 5px;
+  border-radius: 6px;
+  margin: 3px;
+  height: 15px;
+  color: white;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  text-align: center;
+}
+
+#commentSubmit:hover {
+  background-color: #f5d075;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  border-color: white;
+}
+
+// COMMENT ROWS AND BOXES
+
+#oneCommentRow{
+  width: 100%;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+#writingInBox{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+#commentHeader{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.516);
+}
+
+#commentDelete {
+  background-color: rgba(255, 255, 255, 0.516);
+  border-radius: 3px;
+  height: 30px;
+  padding: 3px;
+  color: white;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  right:0;
+}
+
+#commentDelete:hover {
+  background-color: #f5d075;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  border-color: white;
+}
+
+
+
+  // ~~~ FIRE EMOJI AND BUTTON 
+
+#firePNG{
+  img{
+    max-width: 25px;
+    max-height: 25px;
+  }
+}
+
+.fireBtn {
+  display: flex;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  }
+
+.fireBtn{
+  button { 
+    background-color:rgba(15, 15, 111, 0);
+    border-radius: 50%;
+    border: solid 2px orange;}
+}
+.fireBtn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  .flaming{
+    width: 20px;
+    height: 20px;
+    animation: flame 0.4s infinite;
+  }
+}
+.flaming{
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes flame {
+  0% {transform:scale(1);}
+  80% {transform:scale(1.2,1.4);}
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ADMIN UPLOAD ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.uploadPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+}
+
+.adminUploader {
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.60);
+  border-radius: 10px;
+  margin:20px;
+  margin-top: 80px;
+  padding: 20px;
+  background-color: #392b68;
+  width: 50%;
+  min-width: 300px;
+  max-width: 550px;
+}
+
+.uploaderWrap{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.uploadTitle{
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: black 1.5px 1.5px;
+}
+
+#uploadForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploaderItem{
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 4px;
+  border-color: rgba(0, 0, 0, 0.60);
+}
+
+#uploadBtn.uploaderItem {
+  width: 100%;
+  text-align: center;
+  margin-top: 3px;
+  margin-left: 0px;
+  background-color: #af8f4d;
+  padding: 5px 100px 28px 10px;
+  border-radius: 6px;
+  height: 28px;
+  color: white;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+}
+
+#uploadBtn:hover {
+  background-color: #f5d075;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  border-color: white;
+}
+
+.uploadLabel{
+  text-align: center;
+  width: 65px;
+}
+
+.uploaderItem {
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+  margin-right: 0;
+}
+
+.uploadField{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.naughtyWrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  border: 1px solid white;
+  border-radius: 3px;
+  background-color: #392b68;
+  height: 100px;
+}
+
+#naughtyMessage {
+  color: red;
+  text-shadow: rgba(0, 0, 0, 0.74) 1.5px 1.5px;
+  font-size: 40px;
+  text-align: center;
+}
+
+#naughtyEyes{
+  margin-right: 20px;
+  margin-left: 20px;
+  color: red;
+}
+
+
+// ~~~~~~~~~ NAV BAR ~~~~~~~~~~~~~~~~~~~
+
+#navbar{
+  background-color: #ad4cce;
+  border-bottom: 1px solid white;
+}
+
+#navwrap{
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logReg{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(50% - 100px);
+}
+
+#navLink {
+  background-color: #392b68;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  text-decoration: none;
+  color: inherit;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+#navLinkLogout {
+  padding: 5px 10px 5px 10px;
+  background-color: #392b68;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  text-decoration: none;
+  color: inherit;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+#navLink:hover {
+  background-color: #565895;
+  color: #af8f4d;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  border-color: #f5d075;
+}
+
+#navLinkLogout:hover {
+  background-color: #565895;
+  color: #af8f4d;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  border-color: #f5d075;
+}
+
+// ~~~~~~~~~ register page
+
+.regPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+}
+
+.regBox form{
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#regBox{
+  margin-top: 80px;
+  max-width: 600px;
+  width: 60%;
+  min-width: 300px;
+}
+
+#regForm{
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #392b68;
+}
+
+#regTitle{
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+}
+
+.regLabel{
+  width: 95px;
+  text-align: center;
+}
+
+#regForm input{
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+}
+
+#regBtn {
+  margin-top: 5px;
+  background-color: #af8f4d;
+  padding: 5px 10px 28px 10px;
+  border-radius: 6px;
+  height: 28px;
+  color: white;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+}
+
+#regBtn:hover {
+  background-color: #f5d075;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  border-color: white;
+}
+
+.regField{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// ~~~~~~~~~ login page
+
+.loginPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+}
+
+.logBox form{
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.logContainer{
+  width: 40%;
+  max-width: 600px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+#logBox{
+  display: flex;
+  flex-grow: 1;
+  margin-top: 80px;
+  max-width: 500px;
+  max-height: 170px;
+}
+
+#logForm{
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #392b68;
+}
+
+#logTitle{
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+}
+
+.logLabel{
+  width: 95px;
+  text-align: center;
+}
+
+#logForm input{
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+}
+
+#logBtn {
+  margin-top: 5px;
+  background-color: #af8f4d;
+  padding: 5px 10px 28px 10px;
+  border-radius: 6px;
+  height: 28px;
+  color: white;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+}
+
+#logBtn:hover {
+  background-color: #f5d075;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.694) 1px 1px;
+  border-color: white;
+}
+
+.logField{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
