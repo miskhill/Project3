@@ -84,6 +84,24 @@ a:hover{
   flex-direction: column;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+
+}
+
+.hl-item-inner {
+  display: flex;
+}
+
+
 // @media screen and (max-width: 1024px) { /* Specific to this particular image */
 //   .bg {
 //     left: 50%;
