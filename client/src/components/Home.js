@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className='bg' style={{
       backgroundImage: 'url(https://www.theloadout.com/wp-content/uploads/2020/09/league-of-legends-worlds-2020-shanghai.jpg)',
-      height: '300px',
+      height: '800px',
       backgroundRepeat: 'no-repeat',
     }} >
       <div>
