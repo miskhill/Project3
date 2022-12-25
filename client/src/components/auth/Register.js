@@ -33,6 +33,10 @@ const Register = () => {
       history.push('/login')
     } catch (err) {
       setErrors(err.response.data.errors)
+      // handle non-unique email address response
+      if (err.response.data.message === 'Email already exists') {
+        setErrors({ email: 'Email already exists' })
+      }
       console.log(errors)
     }
   }
